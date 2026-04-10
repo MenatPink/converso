@@ -13,6 +13,13 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    files: ["**/*.{ts,tsx}", "**/*.{js,jsx}"],
+    rules: {
+      "react/jsx-one-expression-per-line": ["error", { allow: "single-child" }],
+      "react/no-unescaped-entities": "off",
+    }
+  }
 ]);
 
 export default eslintConfig;
